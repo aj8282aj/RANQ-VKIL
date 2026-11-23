@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the RANQ-VKIL manuscript when its bibliographic details are finalized and identify the software version or commit used."
+title: "RANQ-VKIL: Paper 2 V5.2"
+type: software
+repository-code: "https://github.com/aj8282aj/RANQ-VKIL"
+abstract: "Python implementation of a repeated-outer pilot evaluation of reliability-aware variational quantum kernel fusion under IBM calibration-derived approximate noise simulation."
+keywords:
+  - quantum machine learning
+  - quantum kernels
+  - variational quantum circuits
+  - kernel fusion
+  - calibration-aware evaluation
+  - Hadamard kernel lifting
