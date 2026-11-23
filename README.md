@@ -1,4 +1,4 @@
-# RANQ-VKIL — Paper 2 (V5.2)
+# RANQ-VKIL — Paper  (V5.2)
 
 **Reliability-Aware Variational Quantum Kernel Learning under IBM-calibrated noise**
 
