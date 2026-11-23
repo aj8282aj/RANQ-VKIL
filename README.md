@@ -2,7 +2,7 @@
 
 **Reliability-Aware Variational Quantum Kernel Learning under IBM-calibrated noise**
 
-This repository contains the Python implementation of the V5.2 repeated-outer evaluation used for the RANQ-VKIL Paper 2 pilot study. It evaluates a bank of five variational quantum kernels (VQKs), calibration-conditioned kernel similarities, reliability-aware adaptive fusion, and pure Hadamard degrees (D_1,D_2,D_3), alongside classical SVM controls.
+This repository contains the Python implementation of the V5.2 repeated-outer evaluation used for the RANQ-VKIL Paper 2 pilot study. It evaluates a bank of five variational quantum kernels (VQKs), calibration-conditioned kernel similarities, reliability-aware adaptive fusion, and pure Hadamard degrees `D1`, `D2`, and `D3`, alongside classical SVM controls.
 
 > **Scope:** This is a pilot study using IBM calibration properties to construct approximate noise models for Aer simulation. It is **not** a report of physical quantum processing unit (QPU) execution and does not establish a general quantum advantage.
 
@@ -18,15 +18,15 @@ This repository contains the Python implementation of the V5.2 repeated-outer ev
 
 The script uses five depth-2, four-qubit VQKs with different rotation patterns and entanglement layouts (`VQK_A`–`VQK_E`). The base fusion is followed by pure Hadamard-power controls:
 
-- (D_1 = K_{\text{base}})
-- (D_2 = K_{\text{base}} \odot K_{\text{base}})
-- (D_3 = K_{\text{base}} \odot K_{\text{base}} \odot K_{\text{base}})
+- `D1 = K_base`
+- `D2 = K_base ⊙ K_base`
+- `D3 = K_base ⊙ K_base ⊙ K_base`
 
 The experiment runs six binary-classification datasets: four UCI datasets (Ionosphere, Spambase, QSAR Biodegradation, and Blood Transfusion) and two synthetic variants. The synthetic variants share a generated latent target with two-way and three-way terms; the clean variant uses low-noise correlated measurements, while the noisy variant adds redundant and nuisance features.
 
 For each dataset, the default repeated outer seeds are 42–51. Each split reserves 30 stratified observations for the untouched outer test set and samples 90 stratified observations from the remaining pool for model development. Other observations are not used in that outer repeat. The same outer split is assessed under the available calibration conditions; those conditions are repeated measurements on the same test observations, not independent outer test replicates.
 
-Within the 90-observation training subset, the code uses fold-specific preprocessing and VQC training, calibration-profile contribution summaries, leave-one-calibration-out (LOCO) model development, and degree selection among (D_1,D_2,D_3), with (D_1) as fallback. The script also evaluates individual VQKs, uniform fusion, adaptive fusion, and classical RBF/degree-2/degree-3 SVM baselines.
+Within the 90-observation training subset, the code uses fold-specific preprocessing and VQC training, calibration-profile contribution summaries, leave-one-calibration-out (LOCO) model development, and degree selection among `D1`, `D2`, and `D3`, with `D1` as fallback. The script also evaluates individual VQKs, uniform fusion, adaptive fusion, and classical RBF/degree-2/degree-3 SVM baselines.
 
 ## Requirements
 
