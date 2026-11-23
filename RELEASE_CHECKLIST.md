@@ -14,4 +14,4 @@ Before using this public repository as the definitive code companion to a manusc
 - [ ] Describe the 90-training/30-test pilot sampling protocol and the observations unused in each split.
 - [ ] Present classical comparisons as the implemented RBF, polynomial-degree-2, and polynomial-degree-3 SVM baselines; do not imply a comprehensive tuned benchmark suite.
 - [ ] Add complete manuscript citation details to `CITATION.cff` when the paper is formally published or assigned a preprint DOI.
-- [ ] Add an explicit software license only after the repository owner has chosen one.
+- [x] MIT License added as `LICENSE`; confirm any university, co-author, employer, or funder ownership requirements are satisfied before distributing derivative versions.
