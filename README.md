@@ -103,4 +103,5 @@ Citation metadata are provided in `CITATION.cff`. If you use this code in academ
 
 ## License
 
-No software license is currently included. Unless the repository owner adds a license, the source remains subject to the default copyright terms; public visibility alone does not grant permission to reuse, modify, or redistribute it.
+This project is released under the **MIT License**. See the [LICENSE](LICENSE) file for the full terms. The license applies to the original software and documentation in this repository; third-party datasets, packages, and other external materials remain subject to their own terms.
+
